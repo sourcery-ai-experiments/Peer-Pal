@@ -8,10 +8,10 @@
 <body>
   <h3>Login</h3>
   
-  <form action="includes/login.php" method="POST">
-    <input type="text" name="username" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
-    <button>Signup</button>
+  <form action="includes/login.inc.php" method="POST">
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button>Login</button>
   </form>
 </body>
 </html>
