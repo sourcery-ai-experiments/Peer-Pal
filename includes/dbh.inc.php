@@ -2,7 +2,7 @@
 
 $dsn = "mysql:host=localhost;dbname=peer-pal";
 $dbusername = "root";
-$dbpassword = "";
+$dbpassword = "Just4u..";
 
 try {
   $pdo = new PDO($dsn, $dbusername, $dbpassword);
