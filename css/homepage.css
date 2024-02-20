@@ -1,0 +1,62 @@
+:root {
+  --color1: #ffd2aa;
+  --color2: #6f1a51;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hero {
+  /* background: url("/images/buddies.avif"); */
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("/images/buddies.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* .hero__content {
+  padding: 21rem 2rem;
+  text-align: center;
+  color: var(--color1);
+  font-weight: 900;
+}
+
+.hero__title {
+  font-size: 3rem;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  text-decoration: wavy;
+  color: white;
+  opacity: 0.8;
+} */
+
+.hero__content {
+  padding: 21rem 2rem;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.hero__title {
+  font-size: 3rem;
+  color: var(--color2);
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  color: white;
+}
