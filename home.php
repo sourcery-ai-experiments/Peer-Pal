@@ -11,6 +11,7 @@
     <div class="hero__content">
       <h1 class="hero__title">BuddyConnect: Forge Connections, Foster Growth</h1>
       <p class="hero__subtitle">Discover Your Perfect Study Buddy and Thrive Together</p>
+      <a href="/login.php" class="hero__button">Browse</a>
     </div>
   </div>
 </body>

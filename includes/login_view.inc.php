@@ -2,6 +2,15 @@
 
 declare(strict_types= 1);
 
+// Display username of a logged in user
+function display_username() {
+  if (isset($_SESSION["user_id"])) {
+    echo "You are signed into PeerPal as " . $_SESSION["username"];
+  } else {
+    echo "You haven't signed into PeerPal";
+  }
+}
+
 function check_login_errors() {
   if (isset($_SESSION["login_errors"])) {
     $errors = $_SESSION["login_errors"];

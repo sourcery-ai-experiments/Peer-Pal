@@ -59,7 +59,26 @@ img {
   font-size: 1.5rem;
   opacity: 0.8;
   color: white;
+  margin-bottom: 50px;
 }
+
+.hero__button {
+  padding: 1.2rem 2rem;
+  border: 2px solid var(--color2);
+  border-radius: 6px;
+  background-color: var(--color1);
+  color: var(--color2);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero__button:hover {
+  opacity: 0.6;
+  text-decoration: underline;
+}
+
+/* Authentication Forms */
 
 .form-error {
   color: red;

@@ -19,6 +19,8 @@ require_once "includes/signup_view.inc.php";
       signup_inputs();
     ?>
     <button>signup</button>
+    <hr>
+    <a href="/login.php">login</a>
   </form>
 
   <?php 
