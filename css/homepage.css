@@ -1,6 +1,7 @@
 :root {
+  --primary-color: #122db0;
   --color1: #ffd2aa;
-  --color2: #6f1a51;
+  /* --color2: #6f1a51; */
 }
 
 * {
@@ -12,6 +13,8 @@
 img {
   max-width: 100%;
 }
+
+/* Home Page Styles */
 
 .hero {
   /* background: url("/images/buddies.avif"); */
@@ -52,7 +55,7 @@ img {
 
 .hero__title {
   font-size: 3rem;
-  color: var(--color2);
+  color: var(--primary-color);
 }
 
 .hero__subtitle {
@@ -64,10 +67,10 @@ img {
 
 .hero__button {
   padding: 1.2rem 2rem;
-  border: 2px solid var(--color2);
+  border: 2px solid var(--primary-color);
   border-radius: 6px;
   background-color: var(--color1);
-  color: var(--color2);
+  color: var(--primary-color);
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
@@ -86,4 +89,47 @@ img {
 
 .form-success {
   color: green;
+}
+
+/* Signup Page styles */
+
+#signup-page {
+  background-color: var(--primary-color);
+  padding: 3.5rem 2.5rem;
+}
+
+.signup-page__container {
+  background-color: white;
+  border-radius: 60px;
+}
+
+.signup-page__content {
+  padding: 2rem;
+  display: flex;
+  gap: 28px;
+}
+.signup-page__form-container {
+  border: 2px solid yellow;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-page__image {
+  flex: 1;
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.signup-page__image img {
+  max-width: 100%;
+  display: block;
+}
+
+.signup-page form {
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
 }
