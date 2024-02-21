@@ -15,4 +15,8 @@
     </div>
   </div>
 </body>
+<footer >
+<h1> Creating the right connections</h1>  
+<h4>copyright 2024</h4>
+</footer>
 </html>
