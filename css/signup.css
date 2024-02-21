@@ -1,0 +1,51 @@
+:root {
+  --primary-color: #122db0;
+  --color1: #ffd2aa;
+  /* --color2: #6f1a51; */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+#signup-page {
+  background-color: var(--primary-color);
+  padding: 3.5rem 2.5rem;
+}
+
+.signup__container {
+  background-color: white;
+  height: 700px;
+  border-radius: 60px;
+  padding: 2rem 1.5rem;
+}
+
+#signup-page h3,
+p {
+  text-align: center;
+}
+
+.signup__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup__content form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.signup__content form input,
+.signup__content form button {
+  padding: 12px 16px;
+  border-radius: 28px;
+}
