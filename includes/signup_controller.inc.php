@@ -5,6 +5,8 @@ declare(strict_types= 1);
 // Validate that all field are not empty
 function is_input_empty(string $username, string $email, string $password) {
   if (empty($username) || empty($email) || empty($password)) {
+    return true;
+  } else {
     return false;
   }
 }
