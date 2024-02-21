@@ -36,7 +36,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     require_once 'config_session.inc.php'; // Because I created a safer way to start a session in this required file.
     // Check errors array
     if ($errors) {
-      $_SESSION["errors_signup"] = $errors;
+      $_SESSION["signup_errors"] = $errors;
+
+      $signupDetails = [
+        "username" => $username,
+        "email" => $email
+      ];
+
+      $_SESSION["signup_data"] = $signupDetails;
+
       header("Location: ../signup.php");
       die();
     }

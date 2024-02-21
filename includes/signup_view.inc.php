@@ -2,9 +2,27 @@
 
 declare(strict_types= 1);
 
+function signup_inputs() {
+    if (isset($_SESSION["signup_data"]["username"]) && !isset($_SESSION["signup_errors"]["username_taken"])) {
+      echo '<input type="text" name="username" placeholder="Username"  value="'. $_SESSION["signup_data"]["username"] .'" required>';
+    } else {
+      echo '<input type="text" name="username" placeholder="Username" required>';
+    }
+
+
+    if (isset($_SESSION["signup_data"]["email"]) && !isset($_SESSION["signup_errors"]["email_used"]) && !isset($_SESSION["signup_errors"]["invalid_email"])) {
+      echo '<input type="email" name="email" placeholder="E-mail"  value="'. $_SESSION["signup_data"]["email"] .'" required>';
+    } else {
+      echo '<input type="email" name="email" placeholder="E-mail" required>';
+    }
+
+
+    echo '<input type="password" name="password" placeholder="Password" required>';
+}
+
 function check_signup_errors() {
-  if (isset($_SESSION['errors_signup'])) {
-    $errors = $_SESSION['errors_signup'];
+  if (isset($_SESSION['signup_errors'])) {
+    $errors = $_SESSION['signup_errors'];
     echo "<br>";
 
     foreach ($errors as $error) {
@@ -12,7 +30,7 @@ function check_signup_errors() {
     }
 
     // Delete this errors from session because it isn't needed anymore
-    unset($_SESSION['errors_signup']);
+    unset($_SESSION['signup_errors']);
   } else if (isset($_GET["signup"]) && $_GET["signup"] === "success") {
     echo '<br>';
     echo '<p class="form-success">Signup success!</p>';
