@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $errors = [];
     // Check for username and password from user request
 
-    if (is_login_input_empty($username, $email)) {
+    if (is_login_input_empty($username, $password)) {
       $errors["empty_input"] = "Fill in all fields!";
     }
 

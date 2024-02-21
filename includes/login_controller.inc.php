@@ -16,9 +16,9 @@ function is_login_input_empty(string $username, string $password) {
 // Check if username the user passed is incorrect
 function is_username_incorrect(bool|array $result) {
  if (!$result) {
-  return false;
- } else {
   return true;
+ } else {
+  return false;
  }
 }
 
