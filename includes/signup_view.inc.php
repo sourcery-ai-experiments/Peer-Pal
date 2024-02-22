@@ -23,7 +23,7 @@ function signup_inputs() {
 function check_signup_errors() {
   if (isset($_SESSION['signup_errors'])) {
     $errors = $_SESSION['signup_errors'];
-    echo "<br>";
+    // echo "<br>";
 
     foreach ($errors as $error) {
       echo '<p class="form-error">' . $error . '</p>';
@@ -32,7 +32,7 @@ function check_signup_errors() {
     // Delete this errors from session because it isn't needed anymore
     unset($_SESSION['signup_errors']);
   } else if (isset($_GET["signup"]) && $_GET["signup"] === "success") {
-    echo '<br>';
+    // echo '<br>';
     echo '<p class="form-success">Signup success!</p>';
   }
 }
