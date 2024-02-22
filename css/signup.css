@@ -24,9 +24,9 @@ img {
 
 .signup__container {
   background-color: white;
-  height: 830px;
+  height: 800px;
   border-radius: 60px;
-  padding: 3rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   overflow: hidden;
 }
 
@@ -138,7 +138,7 @@ p {
   }
 
   .signup__container {
-    padding-block: 2rem;
+    padding: 1rem;
   }
 
   .signup__content {
@@ -163,7 +163,6 @@ p {
     background-image: url("/images/form-bg.avif");
     background-repeat: no-repeat;
     background-size: cover;
-    margin-block: 2rem;
   }
 
   /* .signup__content-bg {
