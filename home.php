@@ -7,7 +7,7 @@
   <title>PeerPal | HomePage</title>
 </head>
 <body>
-  testing git
+ 
   <div class="hero">
     <div class="hero__content">
       <h1 class="hero__title">BuddyConnect: Forge Connections, Foster Growth</h1>
