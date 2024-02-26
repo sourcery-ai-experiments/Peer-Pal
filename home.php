@@ -30,9 +30,12 @@
      <p>Lorem ipsum dolor sit amet.</p>
         <p>  Get the app!    </p>
      </div>
-    </div><br>
+    <div >
             <a href="#">Download for iOS</a>
             <a href="#">Download for Android</a><br>
+    </div>
+    </div><br>
+  
      
         <p class ="navigation">
             <a href="#">Legal_terms</a>

@@ -11,7 +11,7 @@
     width: auto;
     text-align: center;
     margin:auto;
-    background-color: #9d07dd;
+    background-color: #5907dd;
     color: #fff;
 }
 .HEADER {
@@ -55,14 +55,4 @@ background-color: cadetblue;
     background-color: #555;
     text-align: justify;
 }
-#mainimage {
-width: 960px;
-}
 
-#joy {
-    width: 200px;
-}
-
-#buisnesslogo {
-width: 100px;
-}
