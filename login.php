@@ -92,7 +92,7 @@ input[type=submit], input[type=submit], input[type=reset] {
     <div class="grid-container">
         <div class="header">
         <header>
-        <img src="PeerPals.png" alt="Peerpal Logo" width="100px" height="100px">
+        <img src="/images/PeerPals.png" alt="Peerpal Logo" width="100px" height="100px">
 </header>
       </div>
 
@@ -107,6 +107,11 @@ input[type=submit], input[type=submit], input[type=reset] {
     <input type="password" name="password" placeholder="Password" size="50" required><br><br>
     <input type="submit" value="Login" size="50">
   </form>
+
+  <p>
+    Are you new here? 
+    <a href="/signup.php"> Signup</a>
+  </p>
 
   <?php 
     check_login_errors()
