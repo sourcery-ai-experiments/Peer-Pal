@@ -17,6 +17,10 @@ require_once 'includes/login_view.inc.php';
   box-sizing: border-box;
 }
 
+h2 {
+  color: white
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -88,23 +92,30 @@ input[type=submit], input[type=submit], input[type=reset] {
     <div class="grid-container">
         <div class="header">
         <header>
-        <img src="PeerPals.png" alt="Peerpal Logo" width="100px" height="100px">
+        <img src="/images/PeerPals.png" alt="Peerpal Logo" width="100px" height="100px">
 </header>
       </div>
 
         <div class="left"></div>
 
 <div class="right">
-    <h2>Sign in</h2>
-        <form action="includes/login.inc.php" target="_self" method="post" autocomplete="on">
-  <label for="username">Username:</label><br>
-  <input type="text" name="username" placeholder="Username" size="50" required autofocus><br><br>
-  <label for="password">Password:</label><br>
-  <input type="password" name="pwd" placeholder="Password" size="50" required><br><br>
-  <input type="submit" value="Login" size="50">
-  <input type="reset" value="Reset"><br>
-  <input type="submit" value="Sign Up">
-</form>
+  <h2>Sign in</h2>
+  <form action="includes/login.inc.php" target="_self" method="post" autocomplete="on">
+    <label for="username">Username:</label><br>
+    <input type="text" name="username" placeholder="Username" size="50" required autofocus><br><br>
+    <label for="password">Password:</label><br>
+    <input type="password" name="password" placeholder="Password" size="50" required><br><br>
+    <input type="submit" value="Login" size="50">
+  </form>
+
+  <p>
+    Are you new here? 
+    <a href="/signup.php"> Signup</a>
+  </p>
+
+  <?php 
+    check_login_errors()
+  ?>
 </div>
 
 </body>
