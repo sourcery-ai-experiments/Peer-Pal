@@ -11,7 +11,7 @@
     width: auto;
     text-align: center;
     margin:auto;
-    background-color: #5907dd;
+    background-color: rgb(107, 1, 160);
     color: #fff;
 }
 .HEADER {
@@ -32,7 +32,7 @@
     left: 50%;
     right: 50%;
     bottom: 10px;
-    transform: translateX(-3%);
+    transform: translateX(10%);
 }
 .navigation a {
     margin-right: 10px;

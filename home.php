@@ -24,18 +24,6 @@
   </div>
 </body>
 <footer class ="foot" >
-<h2>PEER PAL</h2><br>
-    <div >
-     <div>
-     <p>Lorem ipsum dolor sit amet.</p>
-        <p>  Get the app!    </p>
-     </div>
-    <div >
-            <a href="#">Download for iOS</a>
-            <a href="#">Download for Android</a><br>
-    </div>
-    </div><br>
-  
      
         <p class ="navigation">
             <a href="#">Legal_terms</a>
