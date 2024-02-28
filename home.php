@@ -23,37 +23,7 @@
     </div>
   </div>
 </body>
-<footer class ="foot" >
-     
-        <p class ="navigation">
-            <a href="#">Legal_terms</a>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Policy</a>
-            <a href="#">Property</a>
-            <a href="#">Careers</a>
-            <a href="#">portal</a>
-            <a href="#">Blog</a>
-            <a href="#">FAQ</a>
-            <a href="#">Safety</a>
-            <a href="#">Terms</a>
-        </p>
-        <p class ="navigation">
-            <a href="#">Instagram</a>
-            <a href="#">TikTok</a>
-            <a href="#">YouTube</a>
-            <a href="#">Twitter</a>
-            <a href="#">Facebook</a>
-            <a href="#">Destinations</a>
-            <a href="#">Press</a>
-            <a href="#">Contact</a>
-            <a href="#">Cookies</a>
-            <a href="#">Privacy</a>
-        </p><br>
-        
-            <h3> Creating the right connections</h3>  
-            &copy; 2024 PEER PAL GROUP LLC, All Rights Reserved
-</footer>
+
 =======
 <!DOCTYPE html>
 <html lang="en">
@@ -287,5 +257,35 @@
     </div>
   </div>
 </body>
-
+<footer class ="foot" >
+     
+        <p class ="navigation">
+            <a href="#">Legal_terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Policy</a>
+            <a href="#">Property</a>
+            <a href="#">Careers</a>
+            <a href="#">portal</a>
+            <a href="#">Blog</a>
+            <a href="#">FAQ</a>
+            <a href="#">Safety</a>
+            <a href="#">Terms</a>
+        </p>
+        <p class ="navigation">
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">YouTube</a>
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+            <a href="#">Destinations</a>
+            <a href="#">Press</a>
+            <a href="#">Contact</a>
+            <a href="#">Cookies</a>
+            <a href="#">Privacy</a>
+        </p><br>
+        
+            <h3> Creating the right connections</h3>  
+            &copy; 2024 PEER PAL GROUP LLC, All Rights Reserved
+</footer>
 </html>
