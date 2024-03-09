@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     die("Query failed: " . $e->getMessage());
   }
 } else {
-  header("Location: ../index.php");
+  header("Location: ../profile.php");
   die();
 }
 

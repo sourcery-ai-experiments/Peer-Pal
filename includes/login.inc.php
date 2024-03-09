@@ -56,7 +56,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       // Reset session timer since I jsust added user_id and username to session
     $_SESSION["last_regeneration"] = time();
 
-    header("Location: ../login.php?login=success");
+    // header("Location: ../login.php?login=success");
+    header("Location: ../profile.php");
+
 
     // Close my Db Connections [Best practice]
     $pdo = null;

@@ -113,6 +113,10 @@ input[type=submit], input[type=submit], input[type=reset] {
     <a href="/signup.php"> Signup</a>
   </p>
 
+  <form action="/includes/logout.inc.php">
+    <button>logout</button>
+  </form>
+
   <?php 
     check_login_errors()
   ?>

@@ -20,7 +20,7 @@ try {
       nationality VARCHAR(255),
       gender VARCHAR(10),
       faculty VARCHAR(255),
-      course_type VARCHAR(255),
+      study_mode VARCHAR(255),
       photo VARCHAR(255),
       is_admin BOOLEAN DEFAULT FALSE,
       program_type VARCHAR(255),

@@ -15,7 +15,7 @@ require_once "includes/signup_view.inc.php";
     <div class="signup__content">
       <div class="signup__content-detail">
         <a href="/">
-          <img src="/images/icons/home.png" alt="Home Icon">
+          <img src="/images/PeerPals.png" alt="PeerPal logo">
         </a>
         <h3>Welcome to PeerPal</h3>
         <p>Please enter your details</p>
