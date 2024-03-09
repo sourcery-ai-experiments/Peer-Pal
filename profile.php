@@ -38,9 +38,7 @@ try {
         <!-- Display other user details here -->
 
       <a href="/manage-profile.php">Manage Profile</a>
-      <form action="/includes/logout.inc.php">
-        <button id="logout-btn">logout</button>
-      </form>
+      <a href="/">Back to home</a>
       </body>
       </html>
       <?php

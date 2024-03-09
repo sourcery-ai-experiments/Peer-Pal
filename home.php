@@ -13,31 +13,7 @@
 </head>
 <body>
   <!-- HEADER / NAVBAR -->
-  <header class="header">
-    <div class="header-content">
-      <a href="/">
-        <img id="logo" src="/images/PeerPals.png" alt="Peer Pal logo">
-      </a>
-      <nav class="nav">
-        <ul class="nav-links">
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Contact us</a>
-          </li>
-          <li>
-            <a href="/login.php">Login</a>
-          </li>
-          <li>
-            <a href="/signup.php">Register</a>
-          </li>
-        </ul>
-        <img src="/images/icons/menu.png" alt="menu">
-    </div>
-    </nav>
-
-  </header>
+  <?php include("./components/navbar.php") ?>
   <!-- MAIN -->
   <div class="hero">
     <div class="hero__content">

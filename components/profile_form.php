@@ -10,7 +10,11 @@
   <label for="nationality">Nationality:</label>
   <input type="text" id="nationality" name="nationality" value="<?php echo $user['nationality']; ?>"><br><br>
   <label for="gender">Gender:</label>
-  <input type="text" id="gender" name="gender" value="<?php echo $user['gender']; ?>"><br><br>
+  <select name="gender" id="gender">
+    <option value="female" <?php if(isset($user['gender']) && $user['gender'] === 'female') echo 'selected'; ?>>Female</option>
+    <option value="male" <?php if(isset($user['gender']) && $user['gender'] === 'male') echo 'selected'; ?>>Male</option>
+  </select>
+
   <label for="faculty">Faculty:</label>
   <input type="text" id="faculty" name="faculty" value="<?php echo $user['faculty']; ?>"><br><br>
   <label for="study_mode">Study Mode (Full or Part-time):</label>
