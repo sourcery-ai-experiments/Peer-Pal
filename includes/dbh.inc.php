@@ -1,12 +1,21 @@
 <?php 
 
-$dsn = "mysql:host=localhost;dbname=peer-pal";
+$dsn = "mysql:host=localhost;dbname=peer-pal;";
 $dbusername = "root";
 $dbpassword = "PeerPal";
 
 try {
   $pdo = new PDO($dsn, $dbusername, $dbpassword);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+  // // Create Database
+
+  // $sql_db = "CREATE DATABASE IF NOT EXISTS peer-pal";
+  // $pdo->exec($sql_db);
+
+  // // Execute Database
+
+  // $pdo->exec("USE peer-pal");
 
   // Create database tables if they don't exist
   $sql = "CREATE TABLE IF NOT EXISTS users (

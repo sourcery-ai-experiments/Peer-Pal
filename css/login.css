@@ -1,6 +1,7 @@
 :root {
   --primary-color: #122db0;
   --color1: #ffd2aa;
+  --danger: red;
   /* --color2: #6f1a51; */
 }
 
@@ -26,7 +27,7 @@ img {
   padding: 0;
 }
 
-#signup-page {
+#login-page {
   /* background-color: var(--primary-color); */
   background-image: url("/images/form-bg.avif");
   background-repeat: no-repeat;
@@ -34,64 +35,65 @@ img {
   padding: 3.5rem 2rem;
 }
 
-.signup__container {
+.login__container {
   background-color: white;
-  height: 825px;
+  height: 815px;
   border-radius: 50px;
   padding: 1.5rem 1.5rem;
   overflow: hidden;
 }
 
-#signup-page h3,
+#login-page h3,
 p {
   text-align: center;
 }
 
-#signup-page h3 {
+#login-page h3 {
+  margin-top: 1rem;
   font-size: 2rem;
 }
 
-#signup-page p {
+#login-page p {
   font-size: 0.9rem;
 }
 
-.signup__content-detail {
+.login__content-detail {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.signup__content-detail img {
+.login__content-detail img {
   height: auto;
   width: 90px;
   margin: 0 auto;
   border: 1px dotted var(--primary-color);
 }
 
-.signup__content-bg {
+.login__content-bg {
   display: none;
   max-width: 100%;
 }
 
-.signup__content form {
+.login__content form {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.signup__content form input,
-.signup__content form button {
+.login__content form input,
+.login__content form button {
   padding: 12px 16px;
   border-radius: 28px;
 }
 
-.signup__content form input {
+.login__content form input {
   border: 1px solid var(--primary-color);
 }
 
-.signup__content form button {
-  margin-top: 2rem;
+.login__content form button {
+  margin-block: 1rem;
   background-color: var(--primary-color);
   color: white;
   font-size: 1rem;
@@ -99,13 +101,19 @@ p {
   cursor: pointer;
 }
 
-.signup__content form button:hover,
-.signup__content form button:focus {
+.login__content form button:hover,
+.login__content form button:focus {
   opacity: 0.7;
   border-color: var(--primary-color);
 }
 
-.signup__content a {
+.logout-btn:hover,
+.logout-btn:focus {
+  opacity: 0.7;
+  border-color: var(--danger);
+}
+
+.login__content a {
   text-align: center;
 }
 
@@ -136,53 +144,53 @@ p {
 /*  Media Queries */
 
 @media (min-width: 800px) {
-  #signup-page h3 {
+  #login-page h3 {
     font-size: 2.5rem;
   }
 
-  #signup-page p {
+  #login-page p {
     font-size: 1rem;
   }
 
-  #signup-page {
+  #login-page {
     background-image: none;
     background-color: var(--primary-color);
     padding: 4rem 4rem;
   }
 
-  .signup__container {
+  .login__container {
     padding: 1rem;
   }
 
-  .signup__content {
+  .login__content {
     display: flex;
     gap: 60px;
   }
 
-  .signup__content-detail {
+  .login__content-detail {
     flex: 1;
     align-self: flex-start;
     padding-block: 8rem;
   }
 
-  .signup__content form {
+  .login__content form {
     padding-inline: 8rem;
   }
 
-  .signup__content-bg {
+  .login__content-bg {
     display: block;
     flex: 1;
     border-radius: 40px;
-    background-image: url("/images/form-bg.avif");
+    background-image: url("/images/friends.avif");
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  /* .signup__content-bg {
+  /* .login__content-bg {
     border: 1px solid red;
   } */
 
-  /* .signup__content-bg {
+  /* .login__content-bg {
     display: block;
   } */
 }

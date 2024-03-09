@@ -4,6 +4,13 @@
 require_once 'includes/config_session.inc.php';
 require_once 'includes/login_view.inc.php';
 
+// Redirect already logged in user to the home page
+
+if (isset($_SESSION['user_id'])) {
+  header("Location: home.php");
+  exit;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -11,117 +18,42 @@ require_once 'includes/login_view.inc.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PeerPal Login Page</title>
-    <style>
-* {
-  box-sizing: border-box;
-}
-
-h2 {
-  color: white
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.header {
-  grid-area: header;
-  background-color: blue;
-  background-image: linear-gradient(to right, rgba(235, 237, 238, 0.443) , blue);
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-areas: 
-    'header header header header header header' 
-    'left left left right right right';
-} 
-
-.left,
-.right {
-  padding: 10px;
-  height: 700px;
-  background-color: blue; 
-  background-image: linear-gradient(to left, rgba(235, 237, 238, 0.443), blue);
-}
-
-.left {
-  grid-area: left;
-  background-color: blue; 
-  background-image: linear-gradient(to right, rgba(235, 237, 238, 0.443), blue);
-}
-
-.right {
-  grid-area: right;
-  background-color: blue;
-  background-image: linear-gradient(to right, rgba(235, 237, 238, 0.443), blue);
-}
-
-input[type=submit], input[type=submit], input[type=reset] {
-  background-color: lightblue;
-  border: none;
-  color: black;
-  padding: 16px 32px;
-  text-decoration-thickness: 3px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-@media (max-width: 600px) {
-  .grid-container  {
-    grid-template-areas: 
-      'header header header header header header' 
-      'left left left left left left'  
-      'right right right right right right';
-  }
-}
-        </style>
+    <link rel="stylesheet" href="/css/login.css">
+    <title>PeerPal | Login Page</title>
 </head>
+<body id="login-page">
+  <main class="login__container">
+    <div class="login__content">
+      <div class="login__content-detail">
+        <a href="/">
+          <img src="/images/PeerPals.png" alt="PeerPal logo">
+        </a>
+        <h3>Welcome back to PeerPal</h3>
+        <p>Please enter your details</p>
 
-
-<body>
-
-
-<?php 
-    // Only display form when user isn't signed in
-      if (!isset($_SESSION["user_id"])) {}  ?>
-    <div class="grid-container">
-        <div class="header">
-        <header>
-        <img src="/images/PeerPals.png" alt="Peerpal Logo" width="100px" height="100px">
-</header>
+        <form action="includes/login.inc.php" target="_self" method="post" autocomplete="on">
+          <input type="text" class="input-with-person-icon" name="username" placeholder="Username" size="50" required autofocus><br>
+          <input type="password" class="input-with-password-icon" name="password" placeholder="Password" size="50" required><br>
+          <button>Login</button>
+        </form>
+      
+        <p>
+          Are you new here? 
+          <a href="/signup.php"> Signup</a>
+        </p>
+      
+        <!-- <form action="/includes/logout.inc.php">
+          <button id="logout-btn">logout</button>
+        </form> -->
+      
+        <?php 
+          check_login_errors()
+        ?>
       </div>
 
-        <div class="left"></div>
-
-<div class="right">
-  <h2>Sign in</h2>
-  <form action="includes/login.inc.php" target="_self" method="post" autocomplete="on">
-    <label for="username">Username:</label><br>
-    <input type="text" name="username" placeholder="Username" size="50" required autofocus><br><br>
-    <label for="password">Password:</label><br>
-    <input type="password" name="password" placeholder="Password" size="50" required><br><br>
-    <input type="submit" value="Login" size="50">
-  </form>
-
-  <p>
-    Are you new here? 
-    <a href="/signup.php"> Signup</a>
-  </p>
-
-  <form action="/includes/logout.inc.php">
-    <button>logout</button>
-  </form>
-
-  <?php 
-    check_login_errors()
-  ?>
-</div>
-
+      <div class="login__content-bg"></div>
+    </div>
+  </main>
 </body>
 
 </html>
