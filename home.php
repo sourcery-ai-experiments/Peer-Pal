@@ -23,6 +23,11 @@
     </div>
   </div>
 
+  <!-- POTENTIAL BUDDIES -->
+  <?php
+
+  include("./components/potential_buddy_list.php");
+  ?>
   <footer class="footer">
     <ul class="footer-links">
       <li>
