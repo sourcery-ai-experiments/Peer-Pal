@@ -9,13 +9,14 @@ require_once "includes/signup_view.inc.php";
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/signup.css">
+  <title>PeerPal | Signup Page</title>
 </head>
 <body id="signup-page">
   <main class="signup__container">
     <div class="signup__content">
       <div class="signup__content-detail">
         <a href="/">
-          <img src="/images/icons/home.png" alt="Home Icon">
+          <img src="/images/PeerPals.png" alt="PeerPal logo">
         </a>
         <h3>Welcome to PeerPal</h3>
         <p>Please enter your details</p>
