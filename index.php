@@ -1,2 +1,4 @@
-<?php 
-header("Location: home.php");
+<?php
+	header("Location: home.php");
+	exit;
+?>

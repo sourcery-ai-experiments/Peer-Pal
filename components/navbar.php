@@ -23,7 +23,7 @@ $logoutLink = $isLogged ? '<li><a href="../includes/logout.inc.php">Logout</a></
     <nav class="nav">
       <ul class="nav-links">
         <li>
-          <a href="#">About</a>
+          <a href="../about.php">About</a>
         </li>
         <li>
           <a href="#">Contact us</a>
