@@ -14,7 +14,7 @@
     <option value="female" <?php if(isset($user['gender']) && $user['gender'] === 'female') echo 'selected'; ?>>Female</option>
     <option value="male" <?php if(isset($user['gender']) && $user['gender'] === 'male') echo 'selected'; ?>>Male</option>
   </select>
-
+  
   <label for="faculty">Faculty:</label>
   <input type="text" id="faculty" name="faculty" value="<?php echo $user['faculty']; ?>"><br><br>
   <label for="study_mode">Study Mode (Full or Part-time):</label>
@@ -24,6 +24,9 @@
   <label for="program_type">Degree Level:</label>
   <input type="text" id="program_type" name="program_type" value="<?php echo $user['program_type']; ?>"><br><br>
   <label for="student_type">New Student or Existing Student:</label>
-  <input type="text" id="student_type" name="student_type" value="<?php echo $user['student_type']; ?>"><br><br>
+  <select name="student_type" id="student_type">
+    <option value="new student" <?php if(isset($user['student_type']) && $user['student_type'] === 'new student') echo 'selected'; ?>>New Student</option>
+    <option value="existing student" <?php if(isset($user['student_type']) && $user['student_type'] === 'existing student') echo 'selected'; ?>>Existing student</option>
+  </select>
   <button type="submit">Update Profile</button>
 </form>

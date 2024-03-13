@@ -11,7 +11,7 @@ $isLogged = isset($_SESSION['user_id']);
 $loginLink = $isLogged ? "" : '<li><a href="../login.php">Login</a></li>';
 
 $profileLink = $isLogged ? '<li><a href="../profile.php">Profile</a></li>' : "";
-$registerLink = $isLogged ? "" : '<li><a href="../register.php">Register</a></li>';
+$registerLink = $isLogged ? "" : '<li><a href="../signup.php">Register</a></li>';
 $logoutLink = $isLogged ? '<li><a href="../includes/logout.inc.php">Logout</a></li>' : "";
 
 ?>
@@ -23,7 +23,7 @@ $logoutLink = $isLogged ? '<li><a href="../includes/logout.inc.php">Logout</a></
     <nav class="nav">
       <ul class="nav-links">
         <li>
-          <a href="#">About</a>
+          <a href="../about.php">About</a>
         </li>
         <li>
           <a href="#">Contact us</a>
