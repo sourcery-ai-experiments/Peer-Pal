@@ -206,7 +206,7 @@
   <option value="zambian">Zambian</option>
   <option value="zimbabwean">Zimbabwean</option><br><br>
   </select>
-  
+
   <label for="gender">Gender:</label>
   <select name="gender" id="gender">
     <option value="man" <?php if (isset($user['gender']) && $user['gender'] === 'man') echo 'selected'; ?>>man</option>
@@ -220,7 +220,7 @@
   </select>
 
   <label for="faculty">Faculty:</label>
-  <input type="text" id="faculty" name="faculty" value="<?php echo $user['faculty']; ?>">
+  <select input type="text" id="faculty" name="faculty" value="<?php echo $user['faculty']; ?>">
   <option value="Department of accounting, finance and education">Department of accounting, finance and education</option>
   <option value="Department of communication, marketing and media">Department of communication, marketing and media</option>
   <option value="Department of information management">Department of information management</option>
@@ -233,12 +233,14 @@
   <option value="school of Engineering">school of Engineering</option>
   <option value="Grey's school of Art">Grey's school of Art</option>
   <option value="Scott Sutherland School of Architecture & Built Environment">Scott Sutherland School of Architecture & Built Environment</option>
-  <br><br>
+   </select>
+   <br><br>
 
   <label for="study_mode">Study Mode (Full or school of):</label>
-  <input type="text" id="study_mode" name="study_mode" value="<?php echo $user['study_mode']; ?>">
+  <select input type="text" id="study_mode" name="study_mode" value="<?php echo $user['study_mode']; ?>">
   <option value="Full time">Full-time</option>
   <option value="Part-time">Part-time</option>
+  </select>
   <br><br>
 
   <label for="photo">Photo:</label>
