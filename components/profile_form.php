@@ -10,7 +10,7 @@
   <input type="date" id="date_of_birth" name="date_of_birth" value="<?php echo $user['date_of_birth']; ?>"><br><br>
 
   <label for="nationality">Nationality:</label>
-  <input type="text" id="nationality" name="nationality" value="<?php echo $user['nationality']; ?>">
+  <select input type="text" id="nationality" name="nationality" value="<?php echo $user['nationality']; ?>">
   <option value="">-- select one --</option>
   <option value="afghan">Afghan</option>
   <option value="albanian">Albanian</option>
@@ -205,7 +205,8 @@
   <option value="yemenite">Yemenite</option>
   <option value="zambian">Zambian</option>
   <option value="zimbabwean">Zimbabwean</option><br><br>
-
+  </select>
+  
   <label for="gender">Gender:</label>
   <select name="gender" id="gender">
     <option value="man" <?php if (isset($user['gender']) && $user['gender'] === 'man') echo 'selected'; ?>>man</option>
