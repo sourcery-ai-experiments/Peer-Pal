@@ -49,8 +49,20 @@ try {
     UNIQUE (user1_id, user2_id)
   )";
 
+  $sql3 = "CREATE TABLE IF NOT EXISTS match_requests (
+      id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      requester_id INT(11) UNSIGNED NOT NULL,
+      requested_id INT(11) UNSIGNED NOT NULL,
+      status VARCHAR(20) DEFAULT 'pending',
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+      FOREIGN KEY (requester_id) REFERENCES users(id),
+      FOREIGN KEY (requested_id) REFERENCES users(id),
+      UNIQUE (requester_id, requested_id)
+  )";
+
   $pdo->exec($sql);
   $pdo->exec($sql2);
+  $pdo->exec($sql3);
   
   // echo "Connected Successfully";
   // echo "User table created successfully";
