@@ -2,10 +2,10 @@
 
 $dsn = "mysql:host=localhost;dbname=peer-pal;";
 $dbusername = "root";
-$dbpassword = "PeerPal";
+// $dbpassword = "";
 
 try {
-  $pdo = new PDO($dsn, $dbusername, $dbpassword);
+  $pdo = new PDO($dsn, $dbusername);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   // // Create Database
@@ -52,7 +52,7 @@ try {
   $pdo->exec($sql);
   $pdo->exec($sql2);
   
-  // echo "Connected Successfully";
+// echo "Connected Successfully";
   // echo "User table created successfully";
 } catch (PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
