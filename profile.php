@@ -52,10 +52,10 @@ try {
                       <!-- Display other user details here -->
                   </div>
                   <div class="profile-actions">
-                  <a href="/manage-profile.php" class="button">Manage Profile</a>
-                  <a href="/" class="button">Back to home</a>
-                  <a href="/match-requests.php" class="button">Match Requests</a>
-                  <a href="/buddies.php" class="button">My Buddies</a>
+                  <a href="/manage-profile.php" class="button" id="manage-profile-btn">Manage Profile</a>
+                  <a href="/" class="button" id="back-btn">Back to home</a>
+                  <a href="/match-requests.php" class="button match-requests-btn">Match Requests</a>
+                  <a href="/buddies.php" class="button" id="buddies-btn">My Buddies</a>
                   </div>
               </section>
               <section class="posts">

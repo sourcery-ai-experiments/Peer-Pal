@@ -43,6 +43,7 @@ img {
   display: flex;
   gap: 40px;
   list-style: none;
+  align-items: center;
 }
 
 .nav-links li {
@@ -50,14 +51,13 @@ img {
 }
 
 #match-me-link {
-  background-color: var(--primary-color);
-  padding-block: 0.6rem;
-  padding-inline: 1.2rem;
+  border: 1px solid var(--color1);
+  margin: 0;
+  padding: 1rem 1.5rem;
 }
 
-#match-me-link a {
-  margin-top: -10px;
-  color: white;
+#match-me-link:hover {
+  background-color: var(--color1);
 }
 
 .nav-links a {

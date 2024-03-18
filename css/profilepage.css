@@ -47,10 +47,27 @@ header {
   text-align: center;
 }
 
+#buddies-btn {
+  background-color: red;
+}
+
+#manage-profile-btn {
+  background-color: blue;
+}
+
+#back-btn {
+  background-color: black;
+}
+
+#buddies-btn:hover,
+#manage-profile-btn:hover,
+#back-btn:hover {
+  opacity: 0.7;
+}
+
 .profile-actions button {
   padding: 10px 20px;
   margin: 0 10px;
-  background-color: blue;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -58,7 +75,7 @@ header {
 }
 
 .profile-actions button:hover {
-  background-color: #0056b3;
+  opacity: 0.7;
 }
 
 .posts {
