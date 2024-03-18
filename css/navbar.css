@@ -49,6 +49,17 @@ img {
   color: var(--primary-color);
 }
 
+#match-me-link {
+  background-color: var(--primary-color);
+  padding-block: 0.6rem;
+  padding-inline: 1.2rem;
+}
+
+#match-me-link a {
+  margin-top: -10px;
+  color: white;
+}
+
 .nav-links a {
   text-decoration: none;
   text-transform: uppercase;

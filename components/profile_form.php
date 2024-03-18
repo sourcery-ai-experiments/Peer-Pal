@@ -1,7 +1,7 @@
 <h2>Update Personal Details</h2>
 <form action="/includes/update_profile.php" method="POST">
   <label for="first_name">First Name:</label>
-  <input type="text" id="first_name" name="first_name" value="<?php echo $user['first_name']; ?>" placeholder="Your name..">><br><br>
+  <input type="text" id="first_name" name="first_name" value="<?php echo $user['first_name']; ?>" placeholder="Your name.."><br><br>
 
   <label for="last_name">Last Name:</label>
   <input type="text" id="last_name" name="last_name" value="<?php echo $user['last_name']; ?>"><br><br>
@@ -206,7 +206,7 @@
   <option value="zambian">Zambian</option>
   <option value="zimbabwean">Zimbabwean</option><br><br>
   </select>
-
+  <br>
   <label for="gender">Gender:</label>
   <select name="gender" id="gender">
     <option value="man" <?php if (isset($user['gender']) && $user['gender'] === 'man') echo 'selected'; ?>>man</option>
@@ -218,7 +218,7 @@
     <option value="gender not listed" <?php if (isset($user['gender']) && $user['gender'] === 'gender not listed') echo 'selected'; ?>>gender not listed</option>
     <option value="prefer not to say" <?php if (isset($user['gender']) && $user['gender'] === 'prefer not to say') echo 'selected'; ?>>prefer not to say</option>
   </select>
-
+  <br>
   <label for="faculty">Faculty:</label>
   <select input type="text" id="faculty" name="faculty" value="<?php echo $user['faculty']; ?>">
   <option value="Department of accounting, finance and education">Department of accounting, finance and education</option>
@@ -236,13 +236,13 @@
    </select>
    <br><br>
 
-  <label for="study_mode">Study Mode (Full or school of):</label>
+  <label for="study_mode">Study Mode (Full-time or Part-time)</label>
   <select input type="text" id="study_mode" name="study_mode" value="<?php echo $user['study_mode']; ?>">
-  <option value="Full time">Full-time</option>
-  <option value="Part-time">Part-time</option>
+    <option value="Full time">Full-time</option>
+    <option value="Part-time">Part-time</option>
   </select>
   <br><br>
-
+  
   <label for="photo">Photo:</label>
   <input type="text" id="photo" name="photo" value="<?php echo $user['photo']; ?>"><br><br>
   <label for="program_type">Degree Level:</label>
@@ -252,5 +252,8 @@
     <option value="new student" <?php if (isset($user['student_type']) && $user['student_type'] === 'new student') echo 'selected'; ?>>New Student</option>
     <option value="existing student" <?php if (isset($user['student_type']) && $user['student_type'] === 'existing student') echo 'selected'; ?>>Existing student</option>
   </select>
+  <br>
+  <label for="about_me">About me:</label>
+  <textarea name="about_me" id="about_me" cols="30" rows="10">About me...</textarea><br>
   <button type="submit">Update Profile</button>
 </form>

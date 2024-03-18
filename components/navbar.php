@@ -10,6 +10,7 @@ $isLogged = isset($_SESSION['user_id']);
 // Set link dynamically
 $loginLink = $isLogged ? "" : '<li><a href="../login.php">Login</a></li>';
 
+$buddyMatchLink = $isLogged ? '<li id="match-me-link"><a href="../buddy-match.php">Match me</a></li>' : "";
 $profileLink = $isLogged ? '<li><a href="../profile.php">Profile</a></li>' : "";
 $registerLink = $isLogged ? "" : '<li><a href="../signup.php">Register</a></li>';
 $logoutLink = $isLogged ? '<li><a href="../includes/logout.inc.php">Logout</a></li>' : "";
@@ -22,6 +23,7 @@ $logoutLink = $isLogged ? '<li><a href="../includes/logout.inc.php">Logout</a></
     </a>
     <nav class="nav">
       <ul class="nav-links">
+        <?php echo $buddyMatchLink; ?>
         <li>
           <a href="../about.php">About</a>
         </li>

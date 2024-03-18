@@ -34,6 +34,7 @@ try {
       is_admin BOOLEAN DEFAULT FALSE,
       program_type VARCHAR(255),
       student_type VARCHAR(255),
+      about_me TEXT,
       UNIQUE (username),
       UNIQUE (email),
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP
