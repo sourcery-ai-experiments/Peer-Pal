@@ -1,0 +1,145 @@
+
+body{
+
+    background-color:
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+  }
+  
+
+  .picture img {
+    width: 550px; 
+    height: 550px;
+    border-radius: 10%;
+    transition: transform 0.5s ease-in-out;
+    
+  }
+
+  .picture:hover img {
+    transform: scale(1.1);
+}
+
+   h1{
+    text-align: center;
+    padding-bottom: 50px;
+     padding-left: 20px;
+     color: blue;
+
+  }
+
+  h1:hover{
+    color: black;
+  }
+  
+  .container h2{
+    padding-bottom: 50px;
+    padding-left: 2px;
+  
+  }
+
+  .manage h2{
+    padding-left: 2px;
+    color: blue;
+  }
+  
+  h2:hover{
+    color: black;
+  }
+
+  .user-details{
+    padding-left: 1px;
+  }
+
+  input[type="text"] {
+    padding: 6px; 
+    border: 1px solid black; 
+    border-radius: 5px; 
+    
+  }
+
+
+  input[type="date"] {
+    padding: 6px; 
+    border: 1px solid black; 
+    border-radius: 5px; 
+    
+  }
+
+
+  select#nationality {
+    padding: 6px; 
+    border: 1px solid black; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  select#gender {
+    padding: 6px; 
+    border: 1px solid black; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+  }  
+
+  select#faculty {
+    padding: 6px; 
+    border: 1px solid black; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+  }  
+
+  select#study_mode {
+    padding: 6px; 
+    border: 1px solid black; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+  }  
+
+  select#degree_level {
+    padding: 6px; 
+    border: 1px solid black; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+  }  
+
+  select#student_type {
+    padding: 6px; 
+    border: 1px solid black; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+  }  
+
+  select#about_me {
+    padding: 6px; 
+    border: 1px solid black; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+  }  
+
+
+  .update-profile{
+   margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+
+  .update-profile:hover {
+    background-color: #0056b3;
+  }
+  
+  
