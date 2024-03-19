@@ -1,8 +1,8 @@
 <?php 
 
 $dsn = "mysql:host=localhost;dbname=peer-pal;";
-$dbusername = "joodebb";
-$dbpassword = "joodebb";
+$dbusername = "root";
+$dbpassword = "PeerPal";
 
 try {
   $pdo = new PDO($dsn, $dbusername, $dbpassword);
