@@ -1,9 +1,10 @@
 <?php
 try {
     // Check if a session is not already active
-    include("./utils/start_session.php");
+    include("../utils/start_session.php");
+    include("../utils/databaseConfig.php");
 
-    require_once "dbh.inc.php";
+    require_once "../utils/config_session.inc.php";
 
     if (isset($_POST['accept']) || isset($_POST['reject'])) {
         // Ensure $_SESSION['user_id'] is set
@@ -52,12 +53,12 @@ try {
         }
 
         // Redirect back to the page displaying match requests
-        header("Location: ../match-requests.php");
+        header("Location: ../../../../match-requests.php");
         exit;
     } else {
         // Handle invalid form submission
         // echo "<h2>Invalid form submission!</h2>";
-        header("Location: ../error.php");
+        header("Location: ../../../../error.php");
     }
 } catch (PDOException $e) {
     echo "<h3>Something went wrong while processing match request</h3> " . $e->getMessage();

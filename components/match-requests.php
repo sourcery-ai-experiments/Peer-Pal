@@ -1,6 +1,6 @@
 <?php
 // Include database connection and start session
-include("./includes/dbh.inc.php");
+include("./includes/utils/databaseConfig.php");
 // include("./utils/start_session.php");
 
 try {
@@ -21,7 +21,7 @@ try {
             echo "<li>";
             echo "Username: {$request['username']} | Email: {$request['email']} ";
             // Option to accept or reject the match request (via form submission)
-            echo "<form action='../includes/process_match_request.php' method='post'>";
+            echo "<form action='../includes/profile/process_match_request.php' method='post'>";
             echo "<input type='hidden' name='request_id' value='{$request['id']}' />";
             echo "<input type='hidden' name='requester_id' value='{$request['requester_id']}' />";
             echo "<input type='hidden' name='requested_id' value='{$request['requested_id']}' />";

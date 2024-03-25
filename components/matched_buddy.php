@@ -2,7 +2,7 @@
 // Check if the user is logged in
 if (isset($_SESSION['user_id'])) {
     // Include the database connection
-    include("./includes/dbh.inc.php");
+    include("./includes/utils/databaseConfig.php");
 
     try {
         // Prepare SQL statement to select potential buddies excluding the current user
@@ -55,6 +55,7 @@ if (isset($_SESSION['user_id'])) {
         }
     } catch (PDOException $e) {
         // Handle PDO exceptions
+        echo "<h1>Server Error</h1>";
         echo "<h3>Something went wrong</h3> " . $e->getMessage();
     }
 }

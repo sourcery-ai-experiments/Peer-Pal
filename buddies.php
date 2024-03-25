@@ -8,7 +8,7 @@
       header("Location: login.php");
     }
 
-    include("./includes/dbh.inc.php");
+    include("./includes/utils/databaseConfig.php");
 
 ?>
 

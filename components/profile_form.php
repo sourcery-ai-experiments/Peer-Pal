@@ -1,5 +1,5 @@
 <h2>Update Personal Details</h2>
-<form action="/includes/update_profile.php" method="POST">
+<form action="/includes/profile/update_profile.php" method="POST">
   <label for="first_name" >First Name:</label>
   <input type="text" id="first_name" name="first_name" value="<?php echo $user['first_name']; ?>" placeholder="Your name.."><br><br>
 

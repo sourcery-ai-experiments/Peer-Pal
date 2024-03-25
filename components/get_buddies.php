@@ -38,7 +38,8 @@ try {
         }
     } else {
         echo "<div class='buddies-content'>";
-        echo "<p class='buddies-content-text'>No accepted buddies found.</p>";
+        echo "<p class='buddies-content-text'>You currently have no buddies right now</p>";
+        echo "<small class='buddies-content'>You should get matched to someone</small>";
         echo "</div>";
     }
 } catch (PDOException $e) {

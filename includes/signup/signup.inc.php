@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   try {
     
-    require_once "dbh.inc.php";
+    require_once "../utils/databaseConfig.php";
     require_once "signup_model.inc.php";
     require_once "signup_controller.inc.php";
 
@@ -45,13 +45,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
       $_SESSION["signup_data"] = $signupDetails;
 
-      header("Location: ../login.php");
+      header("Location: ../../../../login.php");
       die();
     }
 
     // Create user on signup
     create_user($pdo, $username, $email, $password);
-    header("Location: ../signup.php?signup=success");
+    // header("Location: ../signup.php?signup=success");
+    header("Location: ../../../../login.php");
     $pdo = null;
     $statement = null;
     die();
@@ -60,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     die("Query failed: " . $e->getMessage());
   }
 } else {
-  header("Location: ../profile.php");
+  header("Location: ../../../../profile.php");
   die();
 }
 

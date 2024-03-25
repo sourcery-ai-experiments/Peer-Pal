@@ -27,7 +27,7 @@ try {
       last_name VARCHAR(255),
       date_of_birth DATE,
       nationality VARCHAR(255),
-      gender VARCHAR(10),
+      gender VARCHAR(255),
       faculty VARCHAR(255),
       study_mode VARCHAR(255),
       photo VARCHAR(255),

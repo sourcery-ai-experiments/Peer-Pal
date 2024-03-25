@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   try {
     // import model, controller
-    require_once "dbh.inc.php";
+    require_once "../utils/databaseConfig.php";
     require_once "login_model.inc.php";
     require_once "login_controller.inc.php";
 
@@ -34,12 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Start session
-    require_once 'config_session.inc.php'; // Because I created a safer way to start a session in this required file.
+    require_once '../utils/config_session.inc.php'; // Because I created a safer way to start a session in this required file.
     // Check errors array
     if ($errors) {
       $_SESSION["login_errors"] = $errors;
 
-      header("Location: ../login.php");
+      header("Location: ../../../../login.php");
       die();
     }
 
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $_SESSION["last_regeneration"] = time();
 
     // header("Location: ../login.php?login=success");
-    header("Location: ../profile.php");
+    header("Location: ../../../../profile.php");
 
 
     // Close my Db Connections [Best practice]
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   }
 } else {
   // redirect to login page if the user request isn't right
-  header("Location: ../login.php");
+  header("Location: ../../../../login.php");
   die();
 }
 

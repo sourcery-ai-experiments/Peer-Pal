@@ -1,8 +1,8 @@
 <?php 
 
 // Imports
-require_once 'includes/config_session.inc.php';
-require_once 'includes/login_view.inc.php';
+require_once 'includes/utils/config_session.inc.php';
+require_once 'includes/login/login_view.inc.php';
 
 // Redirect already logged in user to the home page
 
@@ -31,7 +31,7 @@ if (isset($_SESSION['user_id'])) {
         <h3>Welcome back to PeerPal</h3>
         <p>Please enter your details</p>
 
-        <form action="includes/login.inc.php" target="_self" method="post" autocomplete="on">
+        <form action="includes/login/login.inc.php" target="_self" method="post" autocomplete="on">
           <input type="text" class="input-with-person-icon" name="username" placeholder="Username" size="50" required autofocus><br>
           <input type="password" class="input-with-password-icon" name="password" placeholder="Password" size="50" required><br>
           <button>Login</button>

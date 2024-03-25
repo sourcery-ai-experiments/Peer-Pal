@@ -5,8 +5,9 @@
 // echo "</pre>";
 
 // include connection to database
-include("./includes/dbh.inc.php");
 include("./actions/auth_check.php");
+// include("./includes/utils/auth_check.php");
+include("./includes/utils/databaseConfig.php");
 
 try {
   // Check for user_id

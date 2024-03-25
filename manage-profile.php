@@ -1,7 +1,9 @@
 <?php 
-session_start();
+// session_start();
 
-include("./includes/dbh.inc.php");
+include("./includes/utils/start_session.php");
+
+include("./includes/utils/databaseConfig.php");
 
 try {
   // Check for user_id

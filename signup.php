@@ -1,6 +1,6 @@
 <?php 
-require_once "includes/config_session.inc.php";
-require_once "includes/signup_view.inc.php";
+require_once "includes/utils/config_session.inc.php";
+require_once "includes/signup/signup_view.inc.php";
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ require_once "includes/signup_view.inc.php";
         <h3>Welcome to PeerPal</h3>
         <p>Please enter your details</p>
         
-        <form action="includes/signup.inc.php" method="POST">
+        <form action="includes/signup/signup.inc.php" method="POST">
           <?php 
             signup_inputs();
           ?>
