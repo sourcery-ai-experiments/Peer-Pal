@@ -45,7 +45,7 @@ function regenerate_loggedin_session_id() {
   $sessionId = $newSessionId . "_" . $user_id;
   session_id($sessionId);
 
-  $_SESSION["last_generation"] = time();
+  $_SESSION["last_regeneration"] = time();
 }
 
 // Regenerate session ID every 3 minutes for security purpose
@@ -53,3 +53,4 @@ function regenerate_session_id() {
   session_regenerate_id(true);
     $_SESSION["last_regeneration"] = time();
 }
+?>
