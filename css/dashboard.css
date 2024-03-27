@@ -1,0 +1,42 @@
+:root {
+  --primary-color: #122db0;
+  --color1: #ffd2aa;
+  /* --color2: #6f1a51; */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.dashboard {
+  display: flex;
+  /* height: 90vh; */
+}
+
+.dashboard h1 {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.dashboard li {
+  list-style: none;
+}
+
+.left {
+  width: 33%;
+  /* border: 1px solid black; */
+}
+
+.right {
+  width: 65%;
+  padding-left: 1rem;
+  /* border: 1px solid red; */
+}

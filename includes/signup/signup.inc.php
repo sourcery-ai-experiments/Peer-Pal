@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
     // Start session
-    require_once 'config_session.inc.php'; // Because I created a safer way to start a session in this required file.
+    require_once '../utils/config_session.inc.php'; // Because I created a safer way to start a session in this required file.
     // Check errors array
     if ($errors) {
       $_SESSION["signup_errors"] = $errors;
