@@ -33,7 +33,7 @@ try {
             $fetch_user_stmt->execute();
             $buddy_info = $fetch_user_stmt->fetch(PDO::FETCH_ASSOC);
             echo "<ul>";
-            echo "<li><a href=''>{$buddy_info['username']}</a></li>";
+            echo "<li><a href='user_details.php?username={$buddy_info['username']}'>{$buddy_info['username']}</a></li>";
             echo "</ul>";
         }
     } else {
