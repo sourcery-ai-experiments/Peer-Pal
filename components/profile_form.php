@@ -1,5 +1,5 @@
 <h2>Update Personal Details</h2>
-<form action="/includes/profile/update_profile.php" method="POST">
+<form action="/includes/profile/update_profile.php" method="POST" enctype="multipart/form-data">
   <label for="first_name" >First Name:</label>
   <input type="text" id="first_name" name="first_name" value="<?php echo $user['first_name']; ?>" placeholder="Your name.."><br><br>
 
@@ -244,7 +244,8 @@
   <br><br>
   
   <label for="photo">Photo:</label>
-  <input type="text" id="photo" name="photo" value="<?php echo $user['photo']; ?>"><br><br>
+  <!-- <input type="text" id="photo" name="photo" value="<?php echo $user['photo']; ?>"><br><br> -->
+  <input id="photo" name="photo" type="file">
 
   <label for="program_type">Degree Level:</label>
   <select input type="text" id="degree_level" name="degree-level" value="<?php echo $user['program_type']; ?>">

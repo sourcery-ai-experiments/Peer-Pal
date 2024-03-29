@@ -39,7 +39,7 @@ try {
           <div class="container">
               <section class="profile">
                   <div class="profile-picture">
-                      <img src="<?php echo $user['photo']; ?>" alt="Profile Picture">
+                      <img src="./uploads/<?php echo $user['photo']; ?>" alt="Profile Picture">
                   </div>
                   <div class="profile-info">
                       <p><strong>Username:</strong> <?php echo $user['username']; ?></p>
