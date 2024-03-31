@@ -5,8 +5,9 @@
 // echo "</pre>";
 
 // include connection to database
-include("./includes/dbh.inc.php");
 include("./actions/auth_check.php");
+// include("./includes/utils/auth_check.php");
+include("./includes/utils/databaseConfig.php");
 
 try {
   // Check for user_id
@@ -38,7 +39,7 @@ try {
           <div class="container">
               <section class="profile">
                   <div class="profile-picture">
-                      <img src="<?php echo $user['photo']; ?>" alt="Profile Picture">
+                      <img src="./uploads/<?php echo $user['photo']; ?>" alt="Profile Picture">
                   </div>
                   <div class="profile-info">
                       <p><strong>Username:</strong> <?php echo $user['username']; ?></p>

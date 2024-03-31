@@ -2,7 +2,6 @@
 // Start the session
 // require_once "../includes/utils/start_session.php";
 // Include the database connection
-require_once "../includes/dbh.inc.php";
 
 try {
     // Check if the user is logged in
@@ -22,8 +21,8 @@ try {
 
     // Display the list of accepted buddies
     if (!empty($buddies)) {
-        echo "<h2>Accepted Buddies</h2>";
-        echo "<ul>";
+        echo "<div class='buddies-content'>";
+        echo "<h2 style='text-align: center'>Accepted Buddies</h2>";
         foreach ($buddies as $buddy) {
             // Determine the ID of the buddy (the other user)
             $buddy_id = ($buddy['user1_id'] == $user_id) ? $buddy['user2_id'] : $buddy['user1_id'];
@@ -33,12 +32,15 @@ try {
             $fetch_user_stmt->bindParam(':buddy_id', $buddy_id);
             $fetch_user_stmt->execute();
             $buddy_info = $fetch_user_stmt->fetch(PDO::FETCH_ASSOC);
-
-            echo "<li>{$buddy_info['username']}</li>";
+            echo "<ul>";
+            echo "<li><a href='user_details.php?username={$buddy_info['username']}'>{$buddy_info['username']}</a></li>";
+            echo "</ul>";
         }
-        echo "</ul>";
     } else {
-        echo "<p>No accepted buddies found.</p>";
+        echo "<div class='buddies-content'>";
+        echo "<p class='buddies-content-text'>You currently have no buddies right now</p>";
+        echo "<small class='buddies-content'>You should get matched to someone</small>";
+        echo "</div>";
     }
 } catch (PDOException $e) {
     echo "<h3>Something went wrong while fetching buddies</h3> " . $e->getMessage();

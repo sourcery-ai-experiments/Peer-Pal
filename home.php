@@ -17,9 +17,9 @@
   <!-- MAIN -->
   <div class="hero">
     <div class="hero__content">
-      <h1 class="hero__title">BuddyConnect: Forge Connections, Foster Growth</h1>
+      <h1 class="hero__title"><span style="color: gold;">PeerPal:</span> Forge Connections, Foster Growth</h1>
       <p class="hero__subtitle">Discover Your Perfect Study Buddy and Thrive Together</p>
-      <a href="/login.php" class="hero__button">Browse</a>
+      <!-- <a href="/login.php" class="hero__button">Browse</a> -->
     </div>
   </div>
 

@@ -19,8 +19,18 @@ img {
   height: 80vh;
 }
 
-.match-request-none h2 {
+.match-request-content {
+  text-align: center;
+}
+
+.match-request-content .error-text {
   font-size: 2.5rem;
   margin-top: 10rem;
+  text-align: center;
+}
+
+.match-request-content h2 {
+  font-size: 2rem;
+  margin-block: 2rem;
   text-align: center;
 }

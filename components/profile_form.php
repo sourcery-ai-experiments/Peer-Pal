@@ -1,6 +1,6 @@
 <h2>Update Personal Details</h2>
-<form action="/includes/update_profile.php" method="POST">
-  <label for="first_name">First Name:</label>
+<form action="/includes/profile/update_profile.php" method="POST" enctype="multipart/form-data">
+  <label for="first_name" >First Name:</label>
   <input type="text" id="first_name" name="first_name" value="<?php echo $user['first_name']; ?>" placeholder="Your name.."><br><br>
 
   <label for="last_name">Last Name:</label>
@@ -9,9 +9,9 @@
   <label for="date_of_birth">Date of Birth:</label>
   <input type="date" id="date_of_birth" name="date_of_birth" value="<?php echo $user['date_of_birth']; ?>"><br><br>
 
-  <label for="nationality">Nationality:</label>
+  <label for="nationality" class="nationality">Nationality:</label>
   <select input type="text" id="nationality" name="nationality" value="<?php echo $user['nationality']; ?>">
-  <option value="">-- select one --</option>
+  <option value="">-- Select One --</option>
   <option value="afghan">Afghan</option>
   <option value="albanian">Albanian</option>
   <option value="algerian">Algerian</option>
@@ -209,44 +209,51 @@
   <br>
   <label for="gender">Gender:</label>
   <select name="gender" id="gender">
-    <option value="man" <?php if (isset($user['gender']) && $user['gender'] === 'man') echo 'selected'; ?>>man</option>
-    <option value="woman" <?php if (isset($user['gender']) && $user['gender'] === 'woman') echo 'selected'; ?>>woman</option>
-    <option value="transgender man" <?php if (isset($user['gender']) && $user['gender'] === 'transgender man') echo 'selected'; ?>>transgender man</option>
-    <option value="transgender woman" <?php if (isset($user['gender']) && $user['gender'] === 'transgender woman') echo 'selected'; ?>>transgender woman</option>
+    <option value="man" <?php if (isset($user['gender']) && $user['gender'] === 'man') echo 'selected'; ?>>Man</option>
+    <option value="woman" <?php if (isset($user['gender']) && $user['gender'] === 'woman') echo 'selected'; ?>>Woman</option>
+    <option value="transgender man" <?php if (isset($user['gender']) && $user['gender'] === 'transgender man') echo 'selected'; ?>>Transgender man</option>
+    <option value="transgender woman" <?php if (isset($user['gender']) && $user['gender'] === 'transgender woman') echo 'selected'; ?>>Transgender woman</option>
     <option value="Non-binary" <?php if (isset($user['gender']) && $user['gender'] === 'non-binary') echo 'selected'; ?>>Non-binary</option>
     <option value="Agender" <?php if (isset($user['gender']) && $user['gender'] === 'Agender') echo 'selected'; ?>>Agender</option>
-    <option value="gender not listed" <?php if (isset($user['gender']) && $user['gender'] === 'gender not listed') echo 'selected'; ?>>gender not listed</option>
-    <option value="prefer not to say" <?php if (isset($user['gender']) && $user['gender'] === 'prefer not to say') echo 'selected'; ?>>prefer not to say</option>
+    <option value="gender not listed" <?php if (isset($user['gender']) && $user['gender'] === 'gender not listed') echo 'selected'; ?>>Gender not listed</option>
+    <option value="prefer not to say" <?php if (isset($user['gender']) && $user['gender'] === 'prefer not to say') echo 'selected'; ?>>Prefer not to say</option>
   </select>
   <br>
   <label for="faculty">Faculty:</label>
   <select input type="text" id="faculty" name="faculty" value="<?php echo $user['faculty']; ?>">
-  <option value="Department of accounting, finance and education">Department of accounting, finance and education</option>
-  <option value="Department of communication, marketing and media">Department of communication, marketing and media</option>
-  <option value="Department of information management">Department of information management</option>
-  <option value="Department of law">Department of law</option>
-  <option value="school of applied social sciences ">school of Applied social sciences</option>
-  <option value="school of Health sciences ">school of Health sciences</option>
-  <option value="school of Nursing and Midwifery">school of Nursing and Midwifery</option>
-  <option value="school of Pharmarcy andLife sciences">school of Pharmacy and Life sciences</option>
-  <option value="school of Computing">school of Computing</option>
-  <option value="school of Engineering">school of Engineering</option>
-  <option value="Grey's school of Art">Grey's school of Art</option>
+  <option value="Department of accounting, finance and education">Department of Accounting, Finance and Education</option>
+  <option value="Department of communication, marketing and media">Department of Communication, Marketing and Media</option>
+  <option value="Department of information management">Department of Information Management</option>
+  <option value="Department of law">Department of Law</option>
+  <option value="school of applied social sciences ">School of Applied Social Sciences</option>
+  <option value="school of Health sciences ">School of Health Sciences</option>
+  <option value="school of Nursing and Midwifery">School of Nursing and Midwifery</option>
+  <option value="school of Pharmarcy andLife sciences">School of Pharmacy and Life Sciences</option>
+  <option value="school of Computing">School of Computing</option>
+  <option value="school of Engineering">School of Engineering</option>
+  <option value="Grey's school of Art">Grey's School of Art</option>
   <option value="Scott Sutherland School of Architecture & Built Environment">Scott Sutherland School of Architecture & Built Environment</option>
    </select>
    <br><br>
 
-  <label for="study_mode">Study Mode (Full-time or Part-time)</label>
+  <label for="study_mode" >Study Mode </label>
   <select input type="text" id="study_mode" name="study_mode" value="<?php echo $user['study_mode']; ?>">
-    <option value="Full time">Full-time</option>
-    <option value="Part-time">Part-time</option>
+    <option value="Full time">Full-Time</option>
+    <option value="Part-time">Part-Time</option>
   </select>
   <br><br>
   
   <label for="photo">Photo:</label>
-  <input type="text" id="photo" name="photo" value="<?php echo $user['photo']; ?>"><br><br>
+  <!-- <input type="text" id="photo" name="photo" value="<?php echo $user['photo']; ?>"><br><br> -->
+  <input id="photo" name="photo" type="file">
+
   <label for="program_type">Degree Level:</label>
-  <input type="text" id="program_type" name="program_type" value="<?php echo $user['program_type']; ?>"><br><br>
+  <select input type="text" id="degree_level" name="degree-level" value="<?php echo $user['program_type']; ?>">
+  <option value="Full time">Post-Graduate</option>
+    <option value="Part-time">Undergraduate</option>
+  </select>
+  <br><br>
+
   <label for="student_type">New Student or Existing Student:</label>
   <select name="student_type" id="student_type">
     <option value="new student" <?php if (isset($user['student_type']) && $user['student_type'] === 'new student') echo 'selected'; ?>>New Student</option>
@@ -255,5 +262,5 @@
   <br>
   <label for="about_me">About me:</label>
   <textarea name="about_me" id="about_me" cols="30" rows="10">About me...</textarea><br>
-  <button type="submit">Update Profile</button>
+  <button type="submit" class="update-profile" >Update Profile</button>
 </form>

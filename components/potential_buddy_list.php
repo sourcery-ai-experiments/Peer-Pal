@@ -3,7 +3,7 @@
 // Connect to the database
 if (isset($_SESSION['user_id'])) {
     // Redirect to the login page
-    include("./includes/dbh.inc.php");
+    include("./includes/utils/databaseConfig.php");
     
     try {
         // Prepare SQL statement to select potential buddies excluding the current user
@@ -24,7 +24,6 @@ if (isset($_SESSION['user_id'])) {
                 echo "<img src='{$row['photo']}' alt='User Photo' />";
                 echo "<div class='buddy-card-infos'>";
                 echo "<h2>{$row['username']}</h2>";
-                echo "<p>{$row['email']}</p>";
                 echo "</div>";
                 echo "</div>";
             }
