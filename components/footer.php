@@ -13,7 +13,7 @@
         <a href="#">Safety</a>
       </li>
       <li>
-        <a href="#">FAQ</a>
+        <a href="/faq.php">FAQ</a>
       </li>
     </ul>
     <ul class="social-links">
