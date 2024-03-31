@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #122db0;
+    --primary-color-tint: #122db030;
+    --color1: #ffd2aa;
+    /* --color2: #6f1a51; */
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  #banner{
+    height: 90vh;
+    position: relative;
+  }
+
+  #banner > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+  }
+
+  .banner-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .banner-desc{
+    padding: 2em;
+  }
+  .banner-desc:first-child{
+    top: 0;
+    right:0;
+    background-color: #ffffff;
+    clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
+  }
+  .banner-desc:first-child > h1{
+    font-size: 4em;
+  }
+  .banner-desc:last-child {
+    bottom: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
+    padding: 4em 2em;
+  }
+  
+  .banner-desc:last-child > p{
+    color: #ffffff !important;
+    font-size: 22px;
+    margin-left: 2em;
+    max-width: max-content;
+  }
+
+  #resources-card-wrapper{
+    padding:2em;
+  }
+
+  #resources-card-wrapper > #container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid; /* Change from flex to grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive 2x2 grid */
+    gap: 20px; /* Add gap between grid items */
+  }
+  
+
+  #container > .resource-card {
+    background-color: var(--primary-color-tint);
+  }
+  .resource-card > div:first-child{
+    width: 100%;
+    height: 150px;
+  }
+  .resource-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .resource-card > div:last-child{
+    padding:1em;
+  }
+  .resource-card .list {
+    margin-top: 1em;
+  }
+
+  .list > li {
+    margin-top: 1em;
+    list-style-type: none;
+  }
+
+  .list > li a {
+    text-decoration: none;
+    color: #010101;
+  }
+  .list > li a:hover {
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+  #sub-links{
+    margin-top:1em;
+  }
+
+  #sub-links > a {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    color: #010101;
+    width:max-content;
+    text-wrap: nowrap;
+  }
+
+  #sub-links > a:hover {
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+
+  @media only screen and (max-width: 800px){
+    .banner-desc:first-child > h1{
+          font-size: 2em;
+        }
+  }
+  @media only screen and (min-width: 1000px){
+    .banner-desc:last-child > p{
+          position: relative;
+          left:4em;
+    }
+  }

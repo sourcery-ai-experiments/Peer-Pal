@@ -10,7 +10,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 // Check if the user is logged in
 $isLogged = isset($_SESSION['user_id']);
 
-// Check if the user is an admin
+// Check if the user is an admin 
 $isAdmin = isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1;
 
 // Set link dynamically
@@ -25,7 +25,9 @@ $dashboardLink = $isAdmin ? '<li><a href="../dashboard.php">Dashboard</a></li>' 
 <header class="header">
   <div class="header-content">
     <a href="/">
-      <img id="logo" src="/images/PeerPals.png" alt="Peer Pal logo">
+      <div id="logo">
+        <img src="./images/PeerPals.png" alt="Peer Pal logo">
+      </div>
     </a>
     <nav class="nav">
       <ul class="nav-links">
@@ -37,12 +39,15 @@ $dashboardLink = $isAdmin ? '<li><a href="../dashboard.php">Dashboard</a></li>' 
         <li>
           <a href="#">Contact us</a>
         </li>
+        <li>
+          <a href="../resources.php">Resources</a>
+        </li>
         <?php echo $loginLink; ?>
         <?php echo $registerLink; ?>
         <?php echo $profileLink; ?>
         <?php echo $logoutLink; ?>
       </ul>
-      <img src="/images/icons/menu.png" alt="menu">
+      <img src="./images/icons/menu.png" alt="menu">
     </nav>
   </div>
 </header>
