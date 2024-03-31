@@ -2,10 +2,10 @@
 
 $dsn = "mysql:host=localhost;dbname=peer-pal;";
 $dbusername = "root";
-$dbpassword = "PeerPal";
+$dbpassword = "";
 
 try {
-  $pdo = new PDO($dsn, $dbusername, $dbpassword);
+  $pdo = new PDO($dsn, $dbusername);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   // // Create Database
