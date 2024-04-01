@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    font-size: 15px;
+    /* set our custom font */
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 100%;
+  }
+  .container {
+    margin: 0 auto;
+    width: 1140px;
+    min-width: 1200px;
+    padding: 3rem;
+  }
+  
+  
+  .section {
+    background: #116599; /* fallback for old browsers */
+    background: -webkit-linear-gradient(45deg, #2848d6, #3038cd);
+    background: linear-gradient(45deg, #a0b6e4, #276fd3);
+    min-height: 100%;
+  }
+  .section-heading {
+    font-size: 3.5em;
+    text-align: center;
+    margin: 0 0 2rem 0;
+    color: white;
+  }
+  
+  .faq-list .faq {
+    background-color: #fff;
+    border-radius: 1rem;
+    margin: 0 0 1.5rem 0;
+    /* hack for border radius on parent */
+    overflow: hidden;
+    z-index: 1;
+  }
+  .faq-list .faq .faq-header {
+    padding: 1.5rem;
+    /* Give an impression of button to the faq header */
+    cursor: pointer;
+  }
+  .faq-list .faq .faq-header .faq-title {
+    color: #4e4e4e;
+    font-size: 1.2em;
+  }
+  .faq-list .faq .faq-body {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+  }
+  .faq-list .faq .faq-body .faq-text {
+    text-align: justify;
+    font-size: 1em;
+    color: #4e4e4e;
+    padding: 0 1.5rem 1.5rem;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  /* expanded faq item */
+  .faq-list .faq.expanded .faq-header {
+    padding-bottom: 0.8rem;
+  }
+  .faq-list .faq.expanded .faq-body .faq-text {
+    opacity: 1;
+  }
+  
