@@ -43,7 +43,7 @@
 <div class="faq">
         <div class="faq-header">
             <h3 class="faq-title">
-            How can i register on PeerPal?
+            How can I register on PeerPal?
             </h3>
         </div>
         <div class="faq-body">
@@ -86,7 +86,7 @@
         </div>
         <div class="faq-body">
             <div class="faq-text">
-            you can reach out to our support team directly via email at support@peerpal.com with detailed information about the incident. We are committed to maintaining a safe and respectful environment for all users, and your reports help us ensure the integrity of the PeerPal community.
+            You can reach out to our support team directly via email at info@peerpal.com with detailed information about the incident. You can also report the incident by filling the form on the contact us page. We are committed to maintaining a safe and respectful environment for all users, and your reports help us ensure the integrity of the PeerPal community.
             </div>
         </div>
     </div>
@@ -101,7 +101,7 @@
         </div>
         <div class="faq-body">
             <div class="faq-text">
-            While PeerPal originated in the United Kingdom and has a strong presence there, the platform is accessible globally. Students from various countries and regions can join the PeerPal community, connect with peers, and benefit from its resources regardless of their location.
+            At the moment, Peerpal is currently only available in the united kingdom. However, there are plans to expand to other locations in the future.
             </div>
         </div>
     </div>
