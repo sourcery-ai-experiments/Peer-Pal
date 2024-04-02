@@ -10,6 +10,10 @@
         <link rel="stylesheet" href="css/faq.css" />
     </head>
     <body>
+        <!-- HEADER / NAVBAR -->
+      <?php include("./components/navbar.php") ?>
+
+
         <div class="section">
             <div class="container">
             <h3 class="section-heading">FAQ</h3>
@@ -115,5 +119,10 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <!-- Our own custom script -->
         <script src="js/faq.js"></script>
+
+
+        <!-- FOOTER -->
+      <?php include("./components/footer.php") ?>
     </body>
+
 </html>
