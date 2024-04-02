@@ -1,8 +1,13 @@
 <?php 
 
 $dsn = "mysql:host=localhost;dbname=peer-pal;";
+<<<<<<< HEAD
+$dbusername = "joodebb";
+$dbpassword = "joodebb";
+=======
 $dbusername = "root";
 $dbpassword = "";
+>>>>>>> refs/remotes/origin/master
 
 try {
   $pdo = new PDO($dsn, $dbusername);
