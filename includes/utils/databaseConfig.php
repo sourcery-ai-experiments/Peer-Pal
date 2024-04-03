@@ -1,11 +1,23 @@
 <?php 
 
-$dsn = "mysql:host=localhost;dbname=peer-pal;";
-$dbusername = "root";
-$dbpassword = "";
+require_once realpath(__DIR__ . "/../../vendor/autoload.php");
+
+
+use Dotenv\Dotenv;
+
+// Load the .env file from the root folder
+$dotenv = Dotenv::createImmutable(dirname(__DIR__ . "/../../.env"));
+$dotenv->load();
+
+// Access environmental variables
+$db_servername = $_ENV['DB_SERVERNAME'];
+$db_username = $_ENV['DB_USERNAME'];
+$db_password = $_ENV['DB_PASSWORD']; 
+$db_name = $_ENV['DB_NAME'];
 
 try {
-  $pdo = new PDO($dsn, $dbusername);
+  $pdo = new PDO("mysql:host=$db_servername;dbname=$db_name", $db_username, $db_password);
+
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   // // Create Database
