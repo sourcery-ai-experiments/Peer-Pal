@@ -21,7 +21,8 @@ if (isset($_SESSION['user_id'])) {
             // Fetch and display user data
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 echo "<div class='buddy-card'>";
-                echo "<img src='{$row['photo']}' alt='User Photo' />";
+                // echo "<img src='{$row['photo']}' alt='User Photo' />";
+                echo "<img src='./uploads/{$row['photo']}' alt='User Photo' />";
                 echo "<div class='buddy-card-infos'>";
                 echo "<h2>{$row['username']}</h2>";
                 echo "</div>";
