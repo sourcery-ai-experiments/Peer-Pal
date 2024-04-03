@@ -1,7 +1,7 @@
   <footer class="footer">
     <ul class="footer-links">
       <li>
-        <a href="#">Terms</a>
+        <a href="#">Terms.php</a>
       </li>
       <li>
         <a href="#">Contact us</a>
