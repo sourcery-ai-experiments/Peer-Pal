@@ -48,6 +48,7 @@ try {
       program_type VARCHAR(255),
       student_type VARCHAR(255),
       about_me TEXT,
+      verify_token VARCHAR(255),
       UNIQUE (username),
       UNIQUE (email),
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP

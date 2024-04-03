@@ -42,7 +42,7 @@ if (isset($_SESSION['user_id'])) {
           <a href="/signup.php"> Signup</a>
         </p>
 
-        <a href="/forgot-password.php">Forgot Password</a>
+        <a href="/password-reset.php">Forgot Password</a>
       
         <!-- <form action="/includes/logout.inc.php">
           <button id="logout-btn">logout</button>
