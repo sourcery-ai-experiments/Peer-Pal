@@ -43,7 +43,7 @@ try {
     <!-- NAVBAR -->
     <?php include("./components/navbar.php"); ?>
 
-    <div class="container">
+    <div class="container dashboard-page">
         <!-- Dashboard Component -->
         <?php include("./components/dashboard-component.php"); ?>
     </div>
