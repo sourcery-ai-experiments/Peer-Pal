@@ -20,44 +20,54 @@ try {
   // Display a list of users
 
   if (!empty($users)) {
-    echo "<div class='dashboard'>";
+    echo "<div class='container'>";
+    echo "<div class='row'>";
     
-    echo "<div class='left'>";
-      echo "<h2 style='text-align: center'>Users</h2>";
-    
-      echo "<ul>";
-      foreach($users as $user) {
-        echo "<li style='text-align: center'><a href='user_details.php?username={$user['username']}'>{$user['username']}</a>";
-        echo "<form action='../includes/admin/delete_user.php' method='post'>";
-        echo "<input type='hidden' name='user_id' value='{$user['id']}'>";
-        echo "<input type='submit' value='Delete' onclick='return confirm(\"Are you sure you want to delete this user?\");'>";
-        echo "</form>";
-        echo "</li>";
-      }
-      echo "</ul>";
+    // Users Section
+    echo "<div class='col-md-6'>";
+    echo "<div class='card'>";
+    echo "<div class='card-header'><h2 class='text-center'>Users</h2></div>";
+    echo "<div class='card-body'>";
+    echo "<ul class='list-group'>";
+    foreach($users as $user) {
+      echo "<li class='list-group-item d-flex justify-content-between align-items-center'>";
+      echo "<a href='user_details.php?username={$user['username']}'>{$user['username']}</a>";
+      echo "<form action='../includes/admin/delete_user.php' method='post'>";
+      echo "<input type='hidden' name='user_id' value='{$user['id']}'>";
+      echo "<button type='submit' class='btn btn-primary' onclick='return confirm(\"Are you sure you want to delete this user?\");'>Delete</button>";
+      echo "</form>";
+      echo "</li>";
+    }
+    echo "</ul>";
+    echo "</div>";
+    echo "</div>";
     echo "</div>";
     
-    echo "<div class='right'>";
-      echo "<h2 style='text-align: center'>Matches</h2>";
-      
-      echo "<ul>";
-        foreach($buddies as $buddy) {
-          echo "<li style='text-align: center'>";
-          echo "<p>{$buddy['user1_username']} - {$buddy['user2_username']}</p>";
-          echo "<form action='../includes/admin/delete_match.php' method='post'>";
-          echo "<input type='hidden' name='buddy_id' value='{$buddy['id']}'>";
-          echo "<input type='submit' value='Delete Match' onclick='return confirm(\"Are you sure you want to delete this match?\");'>";
-          echo "</form>";
-          echo "</li>";
-        }
-        echo "</ul>";
+    // Matches Section
+    echo "<div class='col-md-6'>";
+    echo "<div class='card'>";
+    echo "<div class='card-header'><h2 class='text-center'>Matches</h2></div>";
+    echo "<div class='card-body'>";
+    echo "<ul class='list-group'>";
+    foreach($buddies as $buddy) {
+      echo "<li class='list-group-item text-center'>";
+      echo "<p>{$buddy['user1_username']} - {$buddy['user2_username']}</p>";
+      echo "<form action='../includes/admin/delete_match.php' method='post'>";
+      echo "<input type='hidden' name='buddy_id' value='{$buddy['id']}'>";
+      echo "<button type='submit' class='btn btn-primary' onclick='return confirm(\"Are you sure you want to delete this match?\");'>Delete Match</button>";
+      echo "</form>";
+      echo "</li>";
+    }
+    echo "</ul>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
 
-      echo "</div>";
-    echo "</div>";
+    echo "</div>"; 
+    echo "</div>"; 
   }
 
 } catch (PDOException $e) {
   echo "<h3>Error: </h3>" . $e->getMessage();
 }
-
 ?>
