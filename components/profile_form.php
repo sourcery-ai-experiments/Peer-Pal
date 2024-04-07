@@ -7,7 +7,7 @@
   <input type="text" id="last_name" name="last_name" value="<?php echo $user['last_name']; ?>"><br><br>
 
   <label for="date_of_birth">Date of Birth:</label>
-  <input type="date" id="date_of_birth" name="date_of_birth" value="<?php echo $user['date_of_birth']; ?>"><br><br>
+  <input required type="date" id="date_of_birth" name="date_of_birth" value="<?php echo $user['date_of_birth']; ?>"><br><br>
 
   <label for="nationality" class="nationality">Nationality:</label>
   <select input type="text" id="nationality" name="nationality" value="<?php echo $user['nationality']; ?>">

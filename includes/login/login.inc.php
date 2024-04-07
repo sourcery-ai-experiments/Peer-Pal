@@ -41,7 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // set session Id to the one we just created
         session_id($sessionId);
-        session_start();
+
+        include "../utils/start_session.php";
+        // session_start();
 
         // Check errors array
         if ($errors) {
