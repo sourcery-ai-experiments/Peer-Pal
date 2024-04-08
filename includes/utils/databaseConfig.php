@@ -1,11 +1,23 @@
 <?php 
 
-$dsn = "mysql:host=localhost;dbname=peer-pal;";
-$dbusername = "joodebb";
-$dbpassword = "joodebb";
+require_once realpath(__DIR__ . "/../../vendor/autoload.php");
+
+
+use Dotenv\Dotenv;
+
+// Load the .env file from the root folder
+$dotenv = Dotenv::createImmutable(dirname(__DIR__ . "/../../.env"));
+$dotenv->load();
+
+// Access environmental variables
+$db_servername = $_ENV['DB_SERVERNAME'];
+$db_username = $_ENV['DB_USERNAME'];
+$db_password = $_ENV['DB_PASSWORD']; 
+$db_name = $_ENV['DB_NAME'];
 
 try {
-  $pdo = new PDO($dsn, $dbusername, $dbpassword);
+  $pdo = new PDO("mysql:host=$db_servername;dbname=$db_name", $db_username, $db_password);
+
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   // // Create Database
@@ -36,19 +48,20 @@ try {
       program_type VARCHAR(255),
       student_type VARCHAR(255),
       about_me TEXT,
+      verify_token VARCHAR(255),
       UNIQUE (username),
       UNIQUE (email),
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP
   )";
 
   $sql2 = "CREATE TABLE IF NOT EXISTS buddies (
-    id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user1_id INT(11) UNSIGNED NOT NULL,
-    user2_id INT(11) UNSIGNED NOT NULL,
-    status VARCHAR(20) DEFAULT 'pending',
-    FOREIGN KEY (user1_id) REFERENCES users(id),
-    FOREIGN KEY (user2_id) REFERENCES users(id),
-    UNIQUE (user1_id, user2_id)
+      id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      user1_id INT(11) UNSIGNED NOT NULL,
+      user2_id INT(11) UNSIGNED NOT NULL,
+      status VARCHAR(20) DEFAULT 'pending',
+      FOREIGN KEY (user1_id) REFERENCES users(id) ON DELETE CASCADE,
+      FOREIGN KEY (user2_id) REFERENCES users(id) ON DELETE CASCADE,
+      UNIQUE (user1_id, user2_id)
   )";
 
   $sql3 = "CREATE TABLE IF NOT EXISTS match_requests (
@@ -57,8 +70,8 @@ try {
       requested_id INT(11) UNSIGNED NOT NULL,
       status VARCHAR(20) DEFAULT 'pending',
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-      FOREIGN KEY (requester_id) REFERENCES users(id),
-      FOREIGN KEY (requested_id) REFERENCES users(id),
+      FOREIGN KEY (requester_id) REFERENCES users(id) ON DELETE CASCADE,
+      FOREIGN KEY (requested_id) REFERENCES users(id) ON DELETE CASCADE,
       UNIQUE (requester_id, requested_id)
   )";
 

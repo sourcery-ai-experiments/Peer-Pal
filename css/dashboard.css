@@ -20,6 +20,10 @@
   /* height: 90vh; */
 }
 
+.dashboard-page {
+  min-height: 90vh;
+}
+
 .dashboard h1 {
   margin-top: 2rem;
   text-align: center;

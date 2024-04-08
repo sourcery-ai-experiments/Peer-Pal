@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/css/homepage.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="icon" type="image/png" href="./images/favicon/favicon-32x32.png">
 
   <title>PeerPal | HomePage</title>
 </head>

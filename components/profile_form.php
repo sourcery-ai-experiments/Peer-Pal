@@ -7,7 +7,7 @@
   <input type="text" id="last_name" name="last_name" value="<?php echo $user['last_name']; ?>"><br><br>
 
   <label for="date_of_birth">Date of Birth:</label>
-  <input type="date" id="date_of_birth" name="date_of_birth" value="<?php echo $user['date_of_birth']; ?>"><br><br>
+  <input required type="date" id="date_of_birth" name="date_of_birth" value="<?php echo $user['date_of_birth']; ?>"><br><br>
 
   <label for="nationality" class="nationality">Nationality:</label>
   <select input type="text" id="nationality" name="nationality" value="<?php echo $user['nationality']; ?>">
@@ -236,10 +236,10 @@
    </select>
    <br><br>
 
-  <label for="study_mode" >Study Mode </label>
-  <select input type="text" id="study_mode" name="study_mode" value="<?php echo $user['study_mode']; ?>">
-    <option value="Full time">Full-Time</option>
-    <option value="Part-time">Part-Time</option>
+  <label for="study_mode">Study Mode:</label>
+  <select id="study_mode" name="study_mode">
+    <option value="Full time"<?php echo ($user['study_mode'] == "Full time") ? " selected" : ""; ?>>Full-Time</option>
+    <option value="Part-time"<?php echo ($user['study_mode'] == "Part-time") ? " selected" : ""; ?>>Part-Time</option>
   </select>
   <br><br>
 
@@ -248,15 +248,13 @@
 
   
   <label for="photo">Photo:</label>
-  <!-- <input type="text" id="photo" name="photo" value="<?php echo $user['photo']; ?>"><br><br> -->
-  <input id="photo" name="photo" type="file">
+  <input id="photo" name="photo" type="file" value=<?php echo $user['photo']; ?>>
 
-  <label for="program_type">Degree Level:</label>
-  <select input type="text" id="degree_level" name="degree-level" value="<?php echo $user['program_type']; ?>">
-  <option value="Full time">Post-Graduate</option>
-    <option value="Part-time">Undergraduate</option>
-  </select>
-  <br><br>
+  <label for="degree_level">Degree Level:</label>
+  <select id="degree_level" name="program_type">
+    <option value="Post-Graduate"<?php echo ($user['program_type'] == "Post-Graduate") ? " selected" : ""; ?>>Post-Graduate</option>
+    <option value="Undergraduate"<?php echo ($user['program_type'] == "Undergraduate") ? " selected" : ""; ?>>Undergraduate</option>
+  </select><br><br>
 
   <label for="student_type">New Student or Existing Student:</label>
   <select name="student_type" id="student_type">
@@ -265,6 +263,6 @@
   </select>
   <br>
   <label for="about_me">About me:</label>
-  <textarea name="about_me" id="about_me" cols="30" rows="10">About me...</textarea><br>
+  <textarea name="about_me" id="about_me" cols="30" rows="10"><?php echo empty($user['about_me']) ? "About me..." : $user['about_me']; ?></textarea><br>
   <button type="submit" class="update-profile" >Update Profile</button>
 </form>

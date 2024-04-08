@@ -37,7 +37,7 @@ $dashboardLink = $isAdmin ? '<li><a href="../dashboard.php">Dashboard</a></li>' 
           <a href="../about.php">About</a>
         </li>
         <li>
-          <a href="#">Contact us</a>
+          <a href="/contact.php">Contact us</a>
         </li>
         <li>
           <a href="../resources.php">Resources</a>

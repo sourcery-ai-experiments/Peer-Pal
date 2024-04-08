@@ -12,7 +12,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     include("../utils/auth_check.php");
     $first_name = $_POST["first_name"];
     $last_name = $_POST["last_name"];
+    # $date_of_birth = $_POST["date_of_birth"];
+
+    // Validate date format
     $date_of_birth = $_POST["date_of_birth"];
+    $date = DateTime::createFromFormat('Y-m-d', $date_of_birth);
+    if (!$date || $date->format('Y-m-d') !== $date_of_birth) {
+        throw new Exception("Invalid date format for date_of_birth.");
+    }
+
     $nationality = $_POST["nationality"];
     $gender = $_POST["gender"];
     $faculty = $_POST["faculty"];
